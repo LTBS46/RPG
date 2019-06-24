@@ -1,7 +1,28 @@
 {
+  "author": "LTBS46",
+  "bugs": {
+    "url": "https://github.com/LTBS46/RPG/issues"
+  },
+  "dependencies": {},
+  "description": "First try",
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "coffeescript": "^2.4.1"
-  }
+  },
+  "homepage": "https://github.com/LTBS46/RPG#readme",
+  "keywords": [
+    "RPG"
+  ],
+  "license": "ISC",
+  "main": "main.js",
+  "name": "rpg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LTBS46/RPG.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
 }
