@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr" onload="startup()">
+
+	<head>
+
+		<title>T1</title>
+		<meta charset="UTF-8"/>
+    <link rel="stylesheet" href="RPG.css" />
+		<script src="RPG.js"></script>
+
+	</head>
+	<body>
+
+		<form onsubmit="resolvestat()" onchange="checkpoint()">
+
+			<h2>Création du personnage :</h2><p id="pt">points restant : 3</p><section class="s-split">
+
+				<div class="dat_div">Nom :<input type="text" name="Nom" id="Nom" required>
+				</div><div class="dat_div">Prenom :<input type="text" name="Prenom" id="Prenom" required>
+				</div><div class="dat_div">Alias :<input type="text" name="Pseudo" id="Pseudo" required>
+				</div><div class="dat_div">Classe :
+					<select name="Classe" id="Classe" oninput="verifclassespe()" required>
+
+						<option value="Guerrier">Guerrier</option>
+						<option value="Archer">Archer</option>
+						<option value="Aventurier">Aventurier</option>
+						<option value="Paladin">Paladin</option>
+						<option value="Chasseur">Chasseur</option>
+						<option value="Mage">Mage</option>
+						<option value="Assassin">Assassin</option>
+						<option value="Roublard">Roublard</option>
+						<option value="Samourai">Samourai</option>
+						<option value="Chevalier">Chevalier</option>
+						<option value="Pugiliste">Pugiliste</option>
+						<option value="Rodeur">Rodeur</option>
+						<option value="Pretre">Pretre</option>
+						<option value="Sorcier">Sorcier</option>
+						<option value="Moine">Moine</option>
+
+					</select>
+
+				</div><div class="dat_div">Specialité de classe :<select name="Csub" id="Csub" required>
+
+						<option value="STD">Classique</option>
+						<optgroup class="subclass" id="Guerrier" label="Guerrier">
+
+							<option value="BRK">Berserker</option>
+
+						</optgroup><optgroup class="subclass" id="Archer" label="Archer">
+						</optgroup><optgroup class="subclass" id="Aventurier" label="Aventurier">
+						</optgroup><optgroup class="subclass" id="Paladin" label="Paladin">
+						</optgroup><optgroup class="subclass" id="Chasseur" label="Chasseur">
+
+							<option value="BRK">Berserker</option>
+
+						</optgroup><optgroup class="subclass" id="Mage" label="Mage">
+
+							<option value="PYR">Pyromancien</option>
+							<!--<option value=""></option>-->
+
+						</optgroup><optgroup class="subclass" id="Assassin" label="Assassin">
+
+							<option value="NIN">Ninja</option>
+
+						</optgroup><optgroup class="subclass" id="Roublard" label="Roublard">
+						</optgroup><optgroup class="subclass" id="Samourai" label="Samourai">
+
+							<option value="RON">Ronin</option>
+
+						</optgroup><optgroup class="subclass" id="Chevalier" label="Chevalier">
+						</optgroup><optgroup class="subclass" id="Pugiliste" label="Pugiliste">
+						</optgroup><optgroup class="subclass" id="Rodeur" label="Rodeur">
+						</optgroup><optgroup class="subclass" id="Pretre" label="Pretre">
+						</optgroup><optgroup class="subclass" id="Sorcier" label="Sorcier">
+
+							<option value="NEC">Necromencien</option>
+
+						</optgroup><optgroup class="subclass" id="Moine" label="Moine">
+						</optgroup>
+
+					</select>
+
+				</div><div>Race :<select name="Race" id="Race" oninput="verifracespe()" required>
+
+						<option value="Humain">Humain</option>
+						<option value="Orc">Orc</option>
+						<option value="Goblin">Goblin</option>
+						<option value="Elf">Elf</option>
+						<option value="Nain">Nain</option>
+
+					</select>
+
+				</div><div class="dat_div">Ethnie :<select name="Rsub" id="Rsub" required>
+
+						<option value="Lambda">Lambda</option>
+						<optgroup id="Humain" label="Humain" >
+
+							<option value="Montagne">Montagnard</option>
+
+						</optgroup>
+						<optgroup id="Goblin" label="Goblin" >
+						</optgroup>
+						<optgroup id="Orc" label="Orc" >
+						</optgroup>
+						<optgroup id="Elf" label="Elf" >
+
+							<option value="Sylvain">Elf sylvain</option>
+							<option value="Sombre">Elf sombre</option>
+
+						</optgroup>
+						<optgroup id="Nain" label="Nain" >
+						</optgroup>
+
+					</select>
+				</div><div class="dat_div">Etre supérieur :<br><input type="checkbox" name="Sup" id="Sup">
+
+					<span id="script_sup"></span>
+
+				</div><div class="dat_div">Arme de predilection :<select name="Weap" id="Weap" required>
+
+						<option value="1HS">Epee a 1 main</option>
+						<option value="2HS">Epee a 2 mains</option>
+						<option value="1HA">Hache a 1 main</option>
+						<option value="2HA">Hache a 2 mains</option>
+						<option value="1HH">Marteau a 1 main</option>
+						<option value="2HH">Marteau a 2 mains</option>
+						<option value="KAT">Katana</option>
+						<option value="ARC">Arc</option>
+						<option value="ARB">Arbalète</option>
+						<option value="DAG">Dague</option>
+						<option value="LAN">Lance</option>
+
+					</select>
+
+				</div>
+
+			</section><input type="submit"/><br/><input type="reset"/>
+
+		</form>
+
+	</body>
+
+</html>
